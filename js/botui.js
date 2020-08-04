@@ -65,7 +65,7 @@ function bot_ui_ini() {
         secondpart = function () {
             botui.message.add({
                 delay: 1500,
-                content: "Localed in HJYZ"
+                content: "Located in HJYZ"
             }).then(function () {
                 botui.message.add({
                     delay: 1500,
@@ -122,7 +122,7 @@ function bot_ui_ini() {
         fourthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "… "
+                content: "出自鲁迅经典语录 "
             }).then(function () {
                 botui.message.add({
                     delay: 1100,
