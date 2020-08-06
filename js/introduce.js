@@ -61,7 +61,7 @@ function bot_ui_ini() {
                                            content: "![...](https://cdn.jsdelivr.net/gh/qxq-king/CDN//xxh/zx/1.jpg)"
                                        }).then(function () {
                                             botui.action.button({
-                                                delay: 1600,
+                                                delay: 80000,
                                                 action: [{
                                                     text: "然后呢？ 😃",
                                                     value: "sure"
