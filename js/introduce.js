@@ -37,29 +37,29 @@ function bot_ui_ini() {
                     content: "zhuxb"
                 }).then(function () {
                     botui.message.add({
-                        delay: 5,
-                        content: "![无法加载图片](https://cdn.jsdelivr.net/gh/qxq-king/CDN//xxh/zx/1.jpg)"
+                        delay: 20,
+                        content: "xinxb"
                     }).then(function () {
                         botui.message.add({
                             delay: 20,
-                            content: "xinxb"
+                            content: "xuancb"
                         }).then(function () {
                             botui.message.add({
                                 delay: 20,
-                                content: "xuancb"
+                                content: "xuexb"
                             }).then(function () {
                                 botui.message.add({
                                     delay: 20,
-                                    content: "xuexb"
+                                    content: "tiyb"
                                 }).then(function () {
                                     botui.message.add({
                                         delay: 20,
-                                        content: "tiyb"
+                                        content: "wenyb"
                                     }).then(function () {
-                                        botui.message.add({
-                                            delay: 20,
-                                            content: "wenyb"
-                                        }).then(function () {
+                                       botui.message.add({
+                                           delay: 5,
+                                           content: "![...](https://cdn.jsdelivr.net/gh/qxq-king/CDN//xxh/zx/1.jpg)"
+                                       }).then(function () {
                                             botui.action.button({
                                                 delay: 1600,
                                                 action: [{
@@ -249,5 +249,11 @@ function bot_ui_ini() {
         delay: 400,
         content: 完
     })
+}
+**/
+
+/**
+function bot_ui_ini() {
+     var botui = new BouUI()
 }
 **/
