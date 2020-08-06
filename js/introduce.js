@@ -209,7 +209,7 @@ function bot_ui_ini() {
 
 
 function bot_ui_ini() {
-    var botui = new BotUI("Hello-qxq-king")
+    var botui = new BotUI("end")
     botui.message,add({
         delay: 400,
         content: 完
