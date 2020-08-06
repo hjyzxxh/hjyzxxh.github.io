@@ -29,21 +29,56 @@ function bot_ui_ini() {
             content: "这里是 HJYZ XXH"
         }).then(function () {
             botui.message.add({
-                delay: 1100,
-                content: "A place full of ***"
+                delay: 800,
+                content: "我们有"
             }).then(function () {
-                botui.action.button({
-                    delay: 1600,
-                    action: [{
-                        text: "然后呢？ 😃",
-                        value: "sure"
-                    }, {
-                        text: "少废话！ 🙄",
-                        value: "skip"
-                    }]
-                }).then(function (a) {
-                    "sure" == a.value && sure();
-                    "skip" == a.value && end()
+                botui.message.add({
+                    delay: 20,
+                    content: "zhuxb"
+                }).then(function () {
+                    botui.message.add({
+                        delay: 5,
+                        content: "![无法加载图片](https://cdn.jsdelivr.net/gh/qxq-king/CDN//xxh/zx/1.jpg)"
+                    }).then(function () {
+                        botui.message.add({
+                            delay: 20,
+                            content: "xinxb"
+                        }).then(function () {
+                            botui.message.add({
+                                delay: 20,
+                                content: "xuancb"
+                            }).then(function () {
+                                botui.message.add({
+                                    delay: 20,
+                                    content: "xuexb"
+                                }).then(function () {
+                                    botui.message.add({
+                                        delay: 20,
+                                        content: "tiyb"
+                                    }).then(function () {
+                                        botui.message.add({
+                                            delay: 20,
+                                            content: "wenyb"
+                                        }).then(function () {
+                                            botui.action.button({
+                                                delay: 1600,
+                                                action: [{
+                                                    text: "然后呢？ 😃",
+                                                    value: "sure"
+                                                }, {
+                                                 text: "少废话！ 🙄",
+                                                 value: "skip"
+                                             }]
+                                            }).then(function (a) {
+                                                "sure" == a.value && sure();
+                                                "skip" == a.value && end()
+                                            })
+                                        })
+                                    })
+                                })
+                            })
+                        })
+                    })
                 })
             })
         })
