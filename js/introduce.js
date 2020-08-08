@@ -101,7 +101,7 @@ function bot_ui_ini() {
         secondpart = function () {
             botui.message.add({
                 delay: 1500,
-                content: "Localed in HJYZ"
+                content: "Located in HJYZ"
             }).then(function () {
                 botui.message.add({
                     delay: 1500,
