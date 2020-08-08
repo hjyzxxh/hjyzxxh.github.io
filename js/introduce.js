@@ -243,6 +243,7 @@ function bot_ui_ini() {
 }
 */
 
+/** 
 function bot_ui_ini() {
     var botui = new BotUI("end")
     botui.message,add({
@@ -250,7 +251,7 @@ function bot_ui_ini() {
         content: 完
     })
 }
-
+*/
 
 /**
 function bot_ui_ini() {
