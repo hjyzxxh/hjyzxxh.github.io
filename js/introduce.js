@@ -66,10 +66,10 @@ function bot_ui_ini() {
                                                 action: [{
                                                     text: "然后呢？ 😃",
                                                     value: "sure"
-                                                }/*, {
+                                                }, {
                                                  text: "少废话！ 🙄",
                                                  value: "skip"
-                                             }*/]
+                                             }]
                                             }).then(function (a) {
                                                 "sure" == a.value && sure();
                                                 "skip" == a.value && end()
