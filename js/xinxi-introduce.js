@@ -28,7 +28,7 @@ function bot_ui_ini() {
             delay: 1100,
             content: "帅哥美女聚集地"
         }).then(function() {
-            botui,message,add({
+            botui.message.add({
                 delay: 1100,
                 content: "我们有"
             }).then(function () {
