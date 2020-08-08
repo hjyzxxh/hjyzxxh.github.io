@@ -22,61 +22,44 @@ function bot_ui_ini() {
     var botui = new BotUI("hello-mashiro")
     botui.message.add({
         delay: 800,
-        content: "Hi👋"
+        content: "欢迎来到鬼畜的信息部"
     }).then(function () {
         botui.message.add({
             delay: 1100,
-            content: "这里是 HJYZ XXH"
-        }).then(function () {
-            botui.message.add({
-                delay: 800,
-                content: "在这里,"
+            content: "帅哥美女聚集地"
+        }).then(function() {
+            botui,message,add({
+                delay: 1100,
+                content: "我们有"
             }).then(function () {
                 botui.message.add({
-                    delay: 800,
-                    content: "我们为你搭建舞台,"
+                    delay: 1100,
+                    content: "鬼畜的颜值担当"
                 }).then(function () {
                     botui.message.add({
                         delay: 800,
-                        content: "你不用担心一身的才能无处施展;"
+                        content: "全学生会最牛逼的技术担当"
                     }).then(function () {
                         botui.message.add({
                             delay: 800,
-                            content: "我们助你一臂之力,"
+                            content: "弱弱地问一句，你会**吗"
                         }).then(function () {
-                            botui.message.add({
-                                delay: 800,
-                                content: "你不用担心自己无一专长;"
-                            }).then(function () {
-                                botui.message.add({
-                                    delay: 800,
-                                    content: "给自己一个机会"
-                                }).then(function () {
-                                    botui.message.add({
-                                        delay: 800,
-                                        content: "创造自己的精彩"
-                                    }).then(function () {
-                                       botui.message.add({
-                                           delay: 1600,
-                                           content: "一中学生会六大天王等你到来"
-                                           /**content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//xxh/zx/1.jpg)"*/
-                                       }).then(function () {
-                                            botui.action.button({
-                                                delay: 800,
-                                                action: [{
-                                                    text: "然后呢？ 😃",
-                                                    value: "sure"
-                                                }, {
-                                                 text: "少废话！ 🙄",
-                                                 value: "skip"
-                                             }]
-                                            }).then(function (a) {
-                                                "sure" == a.value && sure();
-                                                "skip" == a.value && end()
-                                            })
-                                        })
-                                    })
-                                })
+                            botui.action.button({
+                                delay: 1600,
+                                action: [{
+                                    text: "我会",
+                                    value: "qoneyes"
+                                }, {
+                                    text: "不会",
+                                    value: "qoneno"
+                                }, {
+                                    text: "不想说",
+                                    value: "qonedonot"
+                                }]
+                            }).then(function (a) {
+                                "qoneyes" == a.value && qoneyes();
+                                "qoneno" == a.value && qoneno();
+                                "qonedonot" == a.value && qonedonot()
                             })
                         })
                     })
@@ -84,22 +67,37 @@ function bot_ui_ini() {
             })
         })
     });
-    var sure = function () {
+    var qoneyes = function () {
             botui.message.add({
                 delay: 600,
-                content: "😘"
+                content: "信息部欢迎你"
             }).then(function () {
                 secondpart()
             })
         },
-        end = function () {
+        qoneno = function () {
             botui.message.add({
                 delay: 600,
-                content: "![...](https://view.moezx.cc/images/2018/05/06/a1c4cd0452528b572af37952489372b6.md.jpg)"
+                content: "加入我们就好"
+                /**content: "![...](https://view.moezx.cc/images/2018/05/06/a1c4cd0452528b572af37952489372b6.md.jpg)"*/
+            }).then(function(){
+                secondpart()
             })
         },
+        qonedonot =function () {
+            botui.message.add({
+                delay: 600,
+                content: "没事没事你点了啥咱也不知道"
+            }).then(function() {
+                secondpart()
+            })
+        }
         secondpart = function () {
             botui.message.add({
+                delay: 600,
+                content: ""
+            })
+            /*botui.message.add({
                 delay: 1500,
                 content: "Located in HJYZ"
             }).then(function () {
@@ -137,9 +135,15 @@ function bot_ui_ini() {
                         })
                     })
                 })
-            })
+            })*/
         },
         thirdpart = function () {
+            botui.message.add({
+                delay: 600,
+                content: ""
+            })
+        }
+        /**thirdpart = function () {
             botui.message.add({
                 delay: 1E3,
                 content: "读书人的事怎么能叫懒"
@@ -154,11 +158,11 @@ function bot_ui_ini() {
                     fourthpart()
                 })
             })
-        },
-        fourthpart = function () {
+        },*/
+        /**fourthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "… "
+                content: "出自鲁迅经典语录 "
             }).then(function () {
                 botui.message.add({
                     delay: 1100,
@@ -175,93 +179,16 @@ function bot_ui_ini() {
                     })
                 })
             })
-        },
-        fifthpart = function () {
+        },*/
+        /**fifthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "welcome to join us"
+                content: "emmmm，还没改，改了就知道了"
             }).then(function () {
                 botui.message.add({
                     delay: 1600,
-                    content: "群"
-                    /**content: "那么，仔细看看HJYZ吧？ ^_^"*/
-                }).then(function() {
-                    botui.message.add({
-                        delay: 800,
-                        content: "![...](https://view.moezx.cc/images/2018/05/06/a1c4cd0452528b572af37952489372b6.md.jpg)"
-                    })
+                    content: "那么，仔细看看HJYZ吧？ ^_^"
                 })
             })
-        } 
+        } */
 }
-
-/*
-function bot_ui_ini() {
-    var botui = new BotUI("Hello-qxq-king")
-    botui.message.add({
-        delay: 400,
-        content: "Hello"
-    }).then(function() {
-        botui.message.add({
-            delay: 1600,
-            content: "这里是 HJYZ-XXH "
-        }).then(function() {
-            botui.message.add({
-                delay: 800,
-                content: "我们有"
-            }).then(function () {
-                botui.message.add({
-                    delay: 20,
-                    content: "zhuxb"
-                }).then(function() {
-                    botui.message.add({
-                        delay: 5,
-                        content: "![无法加载图片](https://cdn.jsdelivr.net/gh/qxq-king/CDN//xxh/zx/1.jpg)"
-                    }).then(function () {
-                        botui.message.add({
-                            delay: 20,
-                            content: "xinxb"
-                        }).then(function () {
-                            botui.message.add({
-                                delay: 20,
-                                content: "xuancb"
-                            }).then(function () {
-                                botui.message.add({
-                                    delay: 20,
-                                    content: "xuexb"
-                                }).then(function () {
-                                    botui.message.add({
-                                        delay: 20,
-                                        content: "tiyb"
-                                    }).then(function () {
-                                        botui.message.add({
-                                            delay: 20,
-                                            content: "wenyb"
-                                        })
-                                    })
-                                })
-                            })
-                        })
-                    })
-                })
-            })
-        })
-    })
-}
-*/
-
-/** 
-function bot_ui_ini() {
-    var botui = new BotUI("end")
-    botui.message,add({
-        delay: 400,
-        content: 完
-    })
-}
-*/
-
-/**
-function bot_ui_ini() {
-     var botui = new BouUI()
-}
-**/
