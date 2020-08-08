@@ -30,45 +30,46 @@ function bot_ui_ini() {
         }).then(function () {
             botui.message.add({
                 delay: 800,
-                content: "我们有"
+                content: "在这里,"
             }).then(function () {
                 botui.message.add({
-                    delay: 20,
-                    content: "zhuxb"
+                    delay: 800,
+                    content: "我们为你搭建舞台,"
                 }).then(function () {
                     botui.message.add({
-                        delay: 20,
-                        content: "xinxb"
+                        delay: 800,
+                        content: "你不用担心一身的才能无处施展;"
                     }).then(function () {
                         botui.message.add({
-                            delay: 20,
-                            content: "xuancb"
+                            delay: 800,
+                            content: "我们助你一臂之力,"
                         }).then(function () {
                             botui.message.add({
-                                delay: 20,
-                                content: "xuexb"
+                                delay: 800,
+                                content: "你不用担心自己无一专长;"
                             }).then(function () {
                                 botui.message.add({
-                                    delay: 20,
-                                    content: "tiyb"
+                                    delay: 800,
+                                    content: "给自己一个机会"
                                 }).then(function () {
                                     botui.message.add({
-                                        delay: 20,
-                                        content: "wenyb"
+                                        delay: 800,
+                                        content: "创造自己的精彩"
                                     }).then(function () {
                                        botui.message.add({
-                                           delay: 5,
-                                           content: "![...](https://cdn.jsdelivr.net/gh/qxq-king/CDN//xxh/zx/1.jpg)"
+                                           delay: 1600,
+                                           content: "一中学生会六大天王等你到来"
+                                           /**content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//xxh/zx/1.jpg)"*/
                                        }).then(function () {
                                             botui.action.button({
                                                 delay: 80000,
                                                 action: [{
                                                     text: "然后呢？ 😃",
                                                     value: "sure"
-                                                }, {
+                                                }/*, {
                                                  text: "少废话！ 🙄",
                                                  value: "skip"
-                                             }]
+                                             }*/]
                                             }).then(function (a) {
                                                 "sure" == a.value && sure();
                                                 "skip" == a.value && end()
@@ -178,11 +179,17 @@ function bot_ui_ini() {
         fifthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "emmmm，还没改，改了就知道了"
+                content: "welcome to join us"
             }).then(function () {
                 botui.message.add({
                     delay: 1600,
-                    content: "那么，仔细看看HJYZ吧？ ^_^"
+                    content: "群"
+                    /**content: "那么，仔细看看HJYZ吧？ ^_^"*/
+                }).then(function() {
+                    botui.message.add({
+                        delay: 800,
+                        content: "![...](https://view.moezx.cc/images/2018/05/06/a1c4cd0452528b572af37952489372b6.md.jpg)"
+                    })
                 })
             })
         } 
