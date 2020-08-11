@@ -22,66 +22,75 @@ function bot_ui_ini() {
     var botui = new BotUI("hello-mashiro")
     botui.message.add({
         delay: 800,
-        content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/2.jpg)"
-    }).then(function () {
+        action: [{
+            text: "点击继续",
+            value: "thenone"
+        }]
+    });
+    var thenone = function() {
         botui.message.add({
             delay: 800,
-            content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/3.jpg)"
+            content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/2.jpg)"
         }).then(function () {
             botui.message.add({
                 delay: 800,
-                content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/4.jpg)"
+                content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/3.jpg)"
             }).then(function () {
                 botui.message.add({
                     delay: 800,
-                    content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/5.jpg)"
+                    content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/4.jpg)"
                 }).then(function () {
                     botui.message.add({
                         delay: 800,
-                        content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/6.jpg)"
+                        content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/5.jpg)"
                     }).then(function () {
                         botui.message.add({
                             delay: 800,
-                            content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/7.jpg)"
+                            content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/6.jpg)"
                         }).then(function () {
                             botui.message.add({
                                 delay: 800,
-                                content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/8.jpg)"
+                                content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/7.jpg)"
                             }).then(function () {
                                 botui.message.add({
                                     delay: 800,
-                                    content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/9.jpg)"
+                                    content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/8.jpg)"
                                 }).then(function () {
                                     botui.message.add({
                                         delay: 800,
-                                        content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/10.jpg)"
+                                        content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/9.jpg)"
                                     }).then(function () {
                                         botui.message.add({
                                             delay: 800,
-                                            content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/11.jpg)"
+                                            content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/10.jpg)"
                                         }).then(function () {
                                             botui.message.add({
                                                 delay: 800,
-                                                content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/12.jpg)"
+                                                content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/11.jpg)"
                                             }).then(function () {
                                                 botui.message.add({
                                                     delay: 800,
-                                                    content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/13.jpg)"
+                                                    content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/12.jpg)"
                                                 }).then(function () {
                                                     botui.message.add({
                                                         delay: 800,
-                                                        content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/14.jpg)"
+                                                        content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/13.jpg)"
                                                     }).then(function () {
                                                         botui.message.add({
                                                             delay: 800,
-                                                            content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/15.jpg)"
+                                                            content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/14.jpg)"
                                                         }).then(function () {
                                                             botui.message.add({
                                                                 delay: 800,
-                                                                content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/16.jpg)",
-                                                                value: "gotofirst"
-                                                            }).then(function (a) {
-                                                                "gotofirst" == a.value && botui()
+                                                                content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/15.jpg)"
+                                                            }).then(function () {
+                                                                botui.message.add({
+                                                                    delay: 800,
+                                                                    content: "![](https://cdn.jsdelivr.net/gh/qxq-king/CDN//start/16.jpg)",
+                                                                    value: "gotofirst"
+                                                                }).then(function (a) {
+                                                                    "gotofirst" == a.value && second()
+                                                                })
                                                             })
                                                         })
                                                     })
@@ -96,5 +105,5 @@ function bot_ui_ini() {
                 })
             })
         })
-    })
+    }
 }
