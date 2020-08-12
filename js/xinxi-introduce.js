@@ -42,7 +42,7 @@ function bot_ui_ini() {
                     }).then(function () {
                         botui.message.add({
                             delay: 800,
-                            content: "弱弱地问一句，你会**吗"
+                            content: "弱弱地问一句，你会编程吗"
                         }).then(function () {
                             botui.action.button({
                                 delay: 1600,
@@ -72,16 +72,26 @@ function bot_ui_ini() {
                 delay: 600,
                 content: "信息部欢迎你"
             }).then(function () {
-                secondpart()
+                botui.message.add({
+                    ddelay: 800,
+                    content: "加入信息部群聊了解更多"
+                }).then(function() {
+                    secondpart()
+                })
             })
         },
         qoneno = function () {
             botui.message.add({
                 delay: 600,
-                content: "加入我们就好"
+                content: "来信息部吧"
                 /**content: "![...](https://view.moezx.cc/images/2018/05/06/a1c4cd0452528b572af37952489372b6.md.jpg)"*/
             }).then(function(){
-                secondpart()
+                botui.message.add({
+                    delay: 800,
+                    content: "学长手把手教你"
+                }).then(function() {
+                    thirdpart()
+                })
             })
         },
         qonedonot =function () {
@@ -89,13 +99,48 @@ function bot_ui_ini() {
                 delay: 600,
                 content: "没事没事你点了啥咱也不知道"
             }).then(function() {
-                secondpart()
+                thirdpart()
             })
         }
         secondpart = function () {
             botui.message.add({
                 delay: 600,
-                content: ""
+                content: "那方便透露下选的是哪一门编程语言吗"
+            }).then(function() {
+                botui.action.button({
+                    delay: 160,
+                    action: [{
+                        text: "HTML&JavaScript",
+                        value: "HJs"
+                    },{
+                        text: "C&C#",
+                        value: "next"
+                    },{
+                        text: "",
+                        value: "next"
+                    },{
+                        text: "",
+                        value: "next"
+                    },{
+                        text: "",
+                        value: "next"
+                    },{
+                        text: "",
+                        value: "next"
+                    },{
+                        text: "",
+                        value: "next"
+                    },{
+                        text: "",
+                        value: "next"
+                    },{
+                        text: "",
+                        value: "next"
+                    },{
+                        text: "",
+                        value: "next2"
+                    }]
+                })
             })
             /*botui.message.add({
                 delay: 1500,
