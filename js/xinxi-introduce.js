@@ -73,7 +73,7 @@ function bot_ui_ini() {
                     botui.message.add({
                         delay: 800,
                         content: "全学生会最牛逼的技术担当"
-                    }).then(function () {
+                    })/**.then(function () {
                         botui.message.add({
                             delay: 800,
                             content: "弱弱地问一句，你会编程吗"
@@ -96,12 +96,12 @@ function bot_ui_ini() {
                                 "qonedonot" == a.value && qonedonot()
                             })
                         })
-                    })
+                    }) */
                 })
             })
         })
     });
-    var qoneyes = function () {
+    /*var qoneyes = function () {
             botui.message.add({
                 delay: 600,
                 content: "信息部欢迎你"
@@ -117,9 +117,9 @@ function bot_ui_ini() {
         qoneno = function () {
             botui.message.add({
                 delay: 600,
-                content: "来信息部吧"
+                content: "来信息部吧"*/
                 /**content: "![...](https://view.moezx.cc/images/2018/05/06/a1c4cd0452528b572af37952489372b6.md.jpg)"*/
-            }).then(function(){
+            /*}).then(function(){
                 botui.message.add({
                     delay: 800,
                     content: "学长手把手教你"
@@ -175,7 +175,7 @@ function bot_ui_ini() {
                         value: "next2"
                     }]
                 })
-            })
+            })*/
             /*botui.message.add({
                 delay: 1500,
                 content: "Located in HJYZ"
@@ -214,14 +214,14 @@ function bot_ui_ini() {
                         })
                     })
                 })
-            })*/
+            })
         },
         thirdpart = function () {
             botui.message.add({
                 delay: 600,
                 content: ""
             })
-        }
+        }*/
         /**thirdpart = function () {
             botui.message.add({
                 delay: 1E3,
