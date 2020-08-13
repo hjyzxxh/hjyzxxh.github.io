@@ -64,11 +64,11 @@ function bot_ui_ini() {
                                             botui.action.button({
                                                 delay: 800,
                                                 action: [{
-                                                    text: "然后呢？ 😃",
+                                                    text: "了解更多 😃",
                                                     value: "sure"
                                                 }, {
-                                                 text: "少废话！ 🙄",
-                                                 value: "skip"
+                                                    text: "继续 🙄",
+                                                    value: "skip"
                                              }]
                                             }).then(function (a) {
                                                 "sure" == a.value && sure();
@@ -85,52 +85,109 @@ function bot_ui_ini() {
         })
     });
     var sure = function () {
-            botui.message.add({
-                delay: 600,
-                content: "😘"
-            }).then(function () {
                 secondpart()
-            })
         },
         end = function () {
-            botui.message.add({
-                delay: 600,
-                content: "![...](https://view.moezx.cc/images/2018/05/06/a1c4cd0452528b572af37952489372b6.md.jpg)"
-            })
+                thirdpart
         },
         secondpart = function () {
             botui.message.add({
                 delay: 1500,
-                content: "Located in HJYZ"
+                content: "怀集一中学生会是怀集一中的四大组织之一"
             }).then(function () {
                 botui.message.add({
                     delay: 1500,
-                    content: "we"
+                    content: "是协助学校管理的重要组织"
                 }).then(function () {
                     botui.message.add({
                         delay: 1200,
-                        content: "算了编不下去了"
+                        content: "怀集一中学生会分为六个部门"
                     }).then(function () {
                         botui.message.add({
                             delay: 1500,
-                            content: "后面还没改"
+                            content: "分别是"
                         }).then(function () {
                             botui.message.add({
                                 delay: 1500,
-                                content: "凑合着看吧"
+                                content: "主席部"
                             }).then(function () {
                                 botui.message.add({
-                                    delay: 1800,
-                                    content: "..."
+                                    delay: 1500,
+                                    content: "信息部"
                                 }).then(function () {
-                                    botui.action.button({
-                                        delay: 1100,
-                                        action: [{
-                                            text: "为什么这么懒呢？ 🤔",
-                                            value: "why-mashiro"
-                                        }]
-                                    }).then(function (a) {
-                                        thirdpart()
+                                    botui.message.add({
+                                        delay: 1500,
+                                        content: "宣传部"
+                                    }).then(function() {
+                                        botui.message.add({
+                                            delay: 1500,
+                                            content: "学习部"
+                                        }).then(function() {
+                                            botui.message.add({
+                                                delay: 1500,
+                                                content: "体育部"
+                                            }).then(function() {
+                                                botui.message.add({
+                                                    delay: 1500,
+                                                    content: "文娱部"
+                                                }).then(function (a) {
+                                                    fourthpart()
+                                                })
+                                            })
+                                        })
+                                    })
+                                })
+                            })
+                        })
+                    })
+                })
+            })
+        }, 
+        thirdpart = function () {
+            botui.message.add({
+                delay: 1500,
+                content: "怀集一中学生会是怀集一中的四大组织之一"
+            }).then(function () {
+                botui.message.add({
+                    delay: 1500,
+                    content: "是协助学校管理的重要组织"
+                }).then(function () {
+                    botui.message.add({
+                        delay: 1200,
+                        content: "怀集一中学生会分为六个部门"
+                    }).then(function () {
+                        botui.message.add({
+                            delay: 1500,
+                            content: "分别是"
+                        }).then(function () {
+                            botui.message.add({
+                                delay: 1500,
+                                content: "主席部"
+                            }).then(function () {
+                                botui.message.add({
+                                    delay: 1500,
+                                    content: "信息部"
+                                }).then(function () {
+                                    botui.message.add({
+                                        delay: 1500,
+                                        content: "宣传部"
+                                    }).then(function () {
+                                        botui.message.add({
+                                            delay: 1500,
+                                            content: "学习部"
+                                        }).then(function () {
+                                            botui.message.add({
+                                                delay: 1500,
+                                                content: "体育部"
+                                            }).then(function () {
+                                                botui.message.add({
+                                                    delay: 1500,
+                                                    content: "文娱部"
+                                                }).then(function (a) {
+                                                    endpart()
+                                                })
+                                            })
+                                        })
                                     })
                                 })
                             })
@@ -139,56 +196,31 @@ function bot_ui_ini() {
                 })
             })
         },
-        thirdpart = function () {
-            botui.message.add({
-                delay: 1E3,
-                content: "读书人的事怎么能叫懒"
-            }).then(function () {
-                botui.action.button({
-                    delay: 1500,
-                    action: [{
-                        text: "WHAT？ 🤔",
-                        value: "why-cat"
-                    }]
-                }).then(function (a) {
-                    fourthpart()
-                })
-            })
-        },
         fourthpart = function () {
             botui.message.add({
-                delay: 1E3,
-                content: "… "
+                delay: 1500,
+                content: "学校的历次重大活动都少不了四大组织的参与"
             }).then(function () {
                 botui.message.add({
                     delay: 1100,
                     content: "… "
-                }).then(function () {
-                    botui.action.button({
-                        delay: 1500,
-                        action: [{
-                            text: "域名有什么含意吗？(ง •_•)ง",
-                            value: "why-domain"
-                        }]
-                    }).then(function (a) {
-                        fifthpart()
+                }).then(function (a) {
+                        endpart()
                     })
-                })
             })
         },
-        fifthpart = function () {
+        endpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "welcome to join us"
+                content: "下面为各部门的详细介绍"
             }).then(function () {
                 botui.message.add({
-                    delay: 1600,
-                    content: "群"
+                    content: "just join us"
                     /**content: "那么，仔细看看HJYZ吧？ ^_^"*/
                 }).then(function() {
                     botui.message.add({
                         delay: 800,
-                        content: "![...](https://view.moezx.cc/images/2018/05/06/a1c4cd0452528b572af37952489372b6.md.jpg)"
+                        content: "[群聊（到时改）](https://view.moezx.cc/images/2018/05/06/a1c4cd0452528b572af37952489372b6.md.jpg)"
                     })
                 })
             })
