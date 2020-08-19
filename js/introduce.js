@@ -88,7 +88,12 @@ function bot_ui_ini() {
                 secondpart()
         },
         end = function () {
-                thirdpart
+                botui.message.add({
+                    delay: 800,
+                    content: "[点击了解更多](https://h5.clewm.net/?url=qr61.cn%2FoQPxZc%2FqKNayuS&hasredirect=1&from=singlemessage)"
+                }).then(function() {
+                    thirdpart()
+                })
         },
         secondpart = function () {
             botui.message.add({
@@ -220,7 +225,7 @@ function bot_ui_ini() {
                 }).then(function() {
                     botui.message.add({
                         delay: 800,
-                        content: "[群聊（到时改）](https://view.moezx.cc/images/2018/05/06/a1c4cd0452528b572af37952489372b6.md.jpg)"
+                        content: "[点击了解更多](https://h5.clewm.net/?url=qr61.cn%2FoQPxZc%2FqKNayuS&hasredirect=1&from=singlemessage)"
                     })
                 })
             })
